@@ -1,0 +1,45 @@
+#AboutMe-container{
+    height: 500px;
+    width: 100%;
+    border-style: none;
+    margin: 0;
+    margin-top: -17px;
+    display: flex;
+    flex-direction: row;
+}
+
+#AboutMe-photo{
+    border-style: none;
+    width: 50%;
+    background-color: #f2762b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#AboutMe-content{
+    width: 50%;
+    border-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#AboutMe-textbox{
+    background-color: transparent;
+    border-style: none;
+    width: 80%;
+    height: 100%;
+    font-size: 23px;
+    font: 1.34vw/1.9em 'Open Sans',Arial,Helvetica,sans-serif;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-title{
+    font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+    color: white;
+    font-size: 4vw;
+}
