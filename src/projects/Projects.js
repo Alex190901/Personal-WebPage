@@ -32,11 +32,11 @@ class Projects extends Component {
     render() {
         const state = this.state;
         const Items = [
-            { photo: Brakeout, key: 'Brakeout', urlGit: 'https://github.com/Alex190901/break-out-game', urlDisplay: 'https://codepen.io/Alex1909/pen/MVjjdw' },
-            { photo: ImageGallery, key: 'ImageGallery', urlGit: 'https://github.com/Alex190901/photo-finder', urlDisplay: 'https://codepen.io/Alex1909/pen/mzymbV?editors=0110' },
-            { photo: Pong, key: 'Pong', urlGit: 'https://github.com/Alex190901/Pong', urlDisplay: 'https://codepen.io/Alex1909/pen/KeKwwg' },
-            { photo: SpaceWar, key: 'SpaceWar', urlGit: 'https://github.com/Alex190901/space-war', urlDisplay: 'https://codepen.io/Alex1909/pen/pLQwJp' },
-            { photo: TicTac, key: 'TicTac', urlGit: 'https://github.com/Alex190901/TicTac', urlDisplay: 'https://codepen.io/Alex1909/pen/gBbovO' }
+            { photo: Brakeout, key: 'Brakeout', urlGit: 'https://github.com/Alexandru-Purcea/break-out-game', urlDisplay: 'https://codepen.io/Alex1909/pen/MVjjdw' },
+            { photo: ImageGallery, key: 'ImageGallery', urlGit: 'https://github.com/Alexandru-Purcea/photo-finder', urlDisplay: 'https://codepen.io/Alex1909/pen/mzymbV?editors=0110' },
+            { photo: Pong, key: 'Pong', urlGit: 'https://github.com/Alexandru-Purcea/Pong', urlDisplay: 'https://codepen.io/Alex1909/pen/KeKwwg' },
+            { photo: SpaceWar, key: 'SpaceWar', urlGit: 'https://github.com/Alexandru-Purcea/space-war', urlDisplay: 'https://codepen.io/Alex1909/pen/pLQwJp' },
+            { photo: TicTac, key: 'TicTac', urlGit: 'https://github.com/Alexandru-Purcea/TicTac', urlDisplay: 'https://codepen.io/Alex1909/pen/gBbovO' }
         ]
 
         const ListItems = Items.map((item) => {

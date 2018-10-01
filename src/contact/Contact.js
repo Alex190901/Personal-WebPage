@@ -24,7 +24,7 @@ class Contact extends Component {
                         <a className={'button'} id="LinkedIn-button" target={'#blank'} href="https://www.linkedin.com/in/alexandru-gabriel-purcea-6a0768158/">
                             <img src={LinkedIn} className={'icon'} id="Contact-icon" alt="LinkedIn-icon" />
                         </a>
-                        <a className={'button'} id="LinkedIn-button" target={'#blank'} href="https://github.com/Alex190901">
+                        <a className={'button'} id="LinkedIn-button" target={'#blank'} href="https://github.com/Alexandru-Purcea">
                             <img src={Github} className={'icon'} id="Contact-icon" alt="Github-icon" />
                         </a>
                     </div>
