@@ -19,7 +19,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #header-title{
@@ -42,8 +42,9 @@
     align-self: flex-start;
     position: fixed;
     margin-top: 0px;
-    -webkit-transition: background-color 2s; /* Safari */
-    transition: background-color 2s;
+    overflow: hidden;
+    -webkit-transition: background-color 2s, height 500ms; /* Safari */
+    transition: background-color 2s, margin 500ms;
 }
 .icon{
     margin: 5px 10px;
@@ -70,31 +71,42 @@
     transition: background-color 600ms;
 }
 #LinkedIn-button:hover{
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #45b29a;
 }
 #navigation-buttons-container{
     border-style: none;
     background-color: transparent;
     width: 25%;
-    min-width: 320px;
-    height: 50px;
+    min-width: 300px;
+    height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
+@media(max-width: 400px){
+    #social-links{
+        display: none !important;
+    }
+    #navigation-buttons-container{
+        width: 100%;
+    }
+}
+
 
 .navigation-button{
+    width: 33%;
     font-family: Open Sans;
-    color: white;
-    width: 100px;
+    color: rgb(38, 38, 38);
+    max-width: 100px;
     background-color: transparent;
     border-style: none;
     height: 30px;
     border-radius: 6px;
     -webkit-transition: background-color 600ms; /* Safari */
     transition: background-color 600ms;
+    outline: none;
 }
 
 .navigation-button:hover{
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #45b29a;
 }

@@ -10,7 +10,7 @@ class Modal extends Component {
                 <div id="Modal-main">
                     <img src={Exit} className={'icon'} id="Exit-icon" alt="X" onClick={props.handleClose} />
                     <div id='Modal-content'>
-                        <p>What do you want to do ?</p>
+                        <p>What next ?</p>
                         <div id="Modal-options">
                             <button onClick={props.handleRedirectDisplay}>Display</button>
                             <button onClick={props.handleRedirectGit}>See Source</button>

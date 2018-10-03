@@ -6,7 +6,7 @@ class Header extends Component {
     scrollTo(element) {
         const top = document.getElementById(element).offsetTop;
         console.log(top)
-        window.scrollTo({ top: top - 60, behavior: 'smooth' })
+        window.scrollTo({ top: top, behavior: 'smooth' })
     }
 
     render() {

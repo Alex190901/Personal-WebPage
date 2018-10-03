@@ -7,7 +7,7 @@
 #Projects-title{
     background-color: transparent;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 70px;
     font-size: 3.4vw;
     color: white;
 }
@@ -30,6 +30,9 @@
     height: 1500px;
     background-color: rgba(0, 0, 0, 0.3);
 }
+#Projects-elements::-webkit-scrollbar {
+    display: none;
+}
 
 .Project-Photo{
     width: 95%;
@@ -45,22 +48,35 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    overflow: scroll;
 }
+@media (max-width: 900px){
+    .Project-Photo-Container{
+        width: 90% !important;
+        height: 50vw !important;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 
+}
 .Project-Photo-Container{
-    width: 40%;
-    height: 320px;
+    width: 45%;
+    height: 25vw;
     display: flex;
     justify-content: center;
     align-items: center;
     border-style: solid;
-    background-color: rgba(0, 0, 0, 0.5);
-    -webkit-transition: height 2s, width 2s; /* Safari */
-    transition: width 2s, height 2s;
+    border-color: white;
+    /* background-color: rgba(30, 131, 108, 0.6); */
+    background-color: rgba(246, 246, 246, 0.5);
+    -webkit-transition: background-color 300ms, border-color 300ms; /* Safari */
+    transition: background-color 300ms, border-color 300ms;
     cursor: pointer;
 }
 
 .Project-Photo-Container:hover{
-    width: 48%;
-    height: 380px;
+    /* background-color: rgba(30, 131, 108, 0.9);
+    border-color: rgba(30, 131, 108, 0.9); */
+    background-color: rgba(103, 152, 149, 0.9);
+    border-color: rgba(103, 152, 149, 0.9);
 }

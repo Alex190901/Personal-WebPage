@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Projects.css';
-import Brakeout from './assets/Brakeout.jpg';
+import Brakeout from './assets/Brakeout.png';
 import ImageGallery from './assets/ImageGallery.png';
 import Pong from './assets/Pong.png';
 import SpaceWar from './assets/SpaceWar.jpg';
@@ -20,7 +20,9 @@ class Projects extends Component {
         }
     }
     handleOpen(item) {
-        this.setState({ modal: true, urlGit: item.urlGit, urlDisplay: item.urlDisplay }, () => (console.log(this.state)));
+        if (window.innerWidth < 901) {
+            window.open(item.urlGit, '_blank')
+        } else this.setState({ modal: true, urlGit: item.urlGit, urlDisplay: item.urlDisplay });
     }
     handleClose() {
         this.setState({ modal: false, urlGit: '', urlDisplay: '' });
@@ -41,16 +43,14 @@ class Projects extends Component {
 
         const ListItems = Items.map((item) => {
             return (
-                <div className='Project-Photo-Container' onClick={() => this.handleOpen(item)} key={item.key}>
+                <div className='Project-Photo-Container' onClick={() => this.handleOpen(item)} key={item.key} >
                     <img src={item.photo} className="Project-Photo" alt='project' />
                 </div>
             )
         })
-
-        console.log(state)
         return (
             <div id={'Projects-container'}>
-                {state.modal === true && <Modal handleClose={this.handleClose} handleRedirectGit={() => this.handleRedirect(this.state.urlGit)}
+                {state.modal === true && window.innerWidth > 900 && <Modal handleClose={this.handleClose} handleRedirectGit={() => this.handleRedirect(this.state.urlGit)}
                     handleRedirectDisplay={() => this.handleRedirect(this.state.urlDisplay)} />}
                 <div id={'Projects-background'} />;
                 <div id={'Projects-overlay'}>

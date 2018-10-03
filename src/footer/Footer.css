@@ -1,0 +1,41 @@
+#Footer-container{
+    height: 150px;
+    width: 100%;
+    background-color: #c5ded7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Footer-button{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 5px;
+}
+#Footer-button:hover{
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+#Github-icon{
+    width: 30px;
+}
+
+#Footer-icons{
+    width: 40%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Footer-container p{
+    color: #45b29a;
+    font-size: 12px;
+}
+
+#Copyright{
+    color: #45b29a;
+}
