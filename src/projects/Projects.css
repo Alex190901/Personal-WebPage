@@ -1,6 +1,6 @@
 #Projects-container{
     width: 100%;
-    height: 1500px;
+    height: 1600px;
     align-items: center;
 }
 
@@ -15,7 +15,7 @@
     margin: 0;
     position: absolute;
     width: 100%;
-    height: 1500px;
+    height: 1600px;
     background-image: url('./assets/projects-bg.jpg');
     background-size: cover;;
     -webkit-filter: blur(3px);
@@ -27,7 +27,7 @@
     margin-top: -18px;
     position: absolute;
     width: 100%;
-    height: 1500px;
+    height: 1600px;
     background-color: rgba(0, 0, 0, 0.3);
 }
 #Projects-elements::-webkit-scrollbar {
@@ -49,6 +49,7 @@
     align-items: center;
     flex-wrap: wrap;
     overflow: scroll;
+    max-width: 2116px;
 }
 @media (max-width: 900px){
     .Project-Photo-Container{
@@ -66,17 +67,23 @@
     justify-content: center;
     align-items: center;
     border-style: solid;
-    border-color: white;
-    /* background-color: rgba(30, 131, 108, 0.6); */
-    background-color: rgba(246, 246, 246, 0.5);
+    border-color: rgba(103, 152, 149, 0.95);
+    background-color: rgba(246, 246, 246, 0.8);
     -webkit-transition: background-color 300ms, border-color 300ms; /* Safari */
     transition: background-color 300ms, border-color 300ms;
     cursor: pointer;
+    max-height: 344px;
+    max-width: 700px;
 }
-
-.Project-Photo-Container:hover{
-    /* background-color: rgba(30, 131, 108, 0.9);
-    border-color: rgba(30, 131, 108, 0.9); */
-    background-color: rgba(103, 152, 149, 0.9);
-    border-color: rgba(103, 152, 149, 0.9);
+@media (min-width: 900px){
+    .Project-Photo-Container:hover{
+        background-color: rgba(103, 152, 149, 0.9);
+        border-color: white;
+    }
+}
+@media (max-width: 1859px){
+    .Project-Photo-Container{
+        max-width: 614px;
+        max-height: 320px;
+    }
 }
