@@ -14,6 +14,7 @@ import Project from '../components/project/Project.component';
 class Projects extends Component {
     handleRedirect(url) {
         window.open(url, '_blank')
+
     }
     render() {
         const Items = [
