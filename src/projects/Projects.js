@@ -5,53 +5,35 @@ import ImageGallery from './assets/ImageGallery.png';
 import Pong from './assets/Pong.png';
 import SpaceWar from './assets/SpaceWar.jpg';
 import TicTac from './assets/TicTac.png';
-import { Modal } from '../modal/Modal';
+import Knolyx from './assets/knolyx.png';
+import Iamrobbie from './assets/iamrobbie.png';
+import Brainconcert from './assets/brainconcert.png';
+import EasyDo from './assets/EasyDo.png';
+import Project from '../components/project/Project.component';
 
 class Projects extends Component {
-    constructor(props) {
-        super(props);
-        this.handleOpen = this.handleOpen.bind(this);
-        this.handleClose = this.handleClose.bind(this);
-        this.handleRedirect = this.handleRedirect.bind(this);
-        this.state = {
-            modal: false,
-            urlGit: '',
-            urlDisplay: ''
-        }
-    }
-    handleOpen(item) {
-        if (window.innerWidth < 901) {
-            window.open(item.urlGit, '_blank')
-        } else this.setState({ modal: true, urlGit: item.urlGit, urlDisplay: item.urlDisplay });
-    }
-    handleClose() {
-        this.setState({ modal: false, urlGit: '', urlDisplay: '' });
-    }
     handleRedirect(url) {
         window.open(url, '_blank')
-        this.handleClose();
     }
     render() {
-        const state = this.state;
         const Items = [
-            { photo: Brakeout, key: 'Brakeout', urlGit: 'https://github.com/Alexandru-Purcea/break-out-game', urlDisplay: 'https://codepen.io/Alex1909/pen/MVjjdw' },
-            { photo: ImageGallery, key: 'ImageGallery', urlGit: 'https://github.com/Alexandru-Purcea/photo-finder', urlDisplay: 'https://codepen.io/Alex1909/pen/mzymbV?editors=0110' },
-            { photo: Pong, key: 'Pong', urlGit: 'https://github.com/Alexandru-Purcea/Pong', urlDisplay: 'https://codepen.io/Alex1909/pen/KeKwwg' },
-            { photo: SpaceWar, key: 'SpaceWar', urlGit: 'https://github.com/Alexandru-Purcea/space-war', urlDisplay: 'https://codepen.io/Alex1909/pen/pLQwJp' },
-            { photo: TicTac, key: 'TicTac', urlGit: 'https://github.com/Alexandru-Purcea/TicTac', urlDisplay: 'https://codepen.io/Alex1909/pen/gBbovO' }
+            { name: 'Space-War', image: SpaceWar, key: 'SpaceWar', urlGit: 'https://github.com/Alexandru-Purcea/space-war', urlDisplay: 'https://codepen.io/Alex1909/pen/pLQwJp', description: 'Space war is single player game written in vanilla JavaScript. Your mission is to destroy or dodge as many asteroids as possible.' },
+            { name: 'Brain-Concert', image: Brainconcert, key: 'Brainconcert', urlDisplay: 'https://www.brainconcert.com/', description: "I have implemented the website for 'Brain Concert', an online store for IT courses." },
+            { name: 'Brakeout', image: Brakeout, key: 'Brakeout', urlGit: 'https://github.com/Alexandru-Purcea/break-out-game', urlDisplay: 'https://codepen.io/Alex1909/pen/MVjjdw', description: 'BrakeOut is a modern implementation of the 1976 original game which was released by Atari.It is built using plain JavaScript, HTML and CSS. ' },
+            { name: 'Photo-finder', image: ImageGallery, key: 'ImageGallery', urlGit: 'https://github.com/Alexandru-Purcea/photo-finder', urlDisplay: 'https://codepen.io/Alex1909/pen/mzymbV?editors=0110', description: 'Photo-Finder is a web page written in React that uses Google Search API to help you find the photo you were looking for.' },
+            { name: 'Pong', image: Pong, key: 'Pong', urlGit: 'https://github.com/Alexandru-Purcea/Pong', urlDisplay: 'https://codepen.io/Alex1909/pen/KeKwwg', description: 'Pong is a modern implementation of the original game which was released in 1972 by Atari. It is built using plain JavaScript, HTML and CSS. ' },
+            { name: 'I am Robbie', image: Iamrobbie, key: 'Iamrobbie', urlDisplay: 'http://www.iamrobbie.ro/', description: "I have implemeted the website for 'I am Robbie', an educational program where children can assimilate the notions of mathematics, physics and communication with the help of practical activities." },
+            { name: 'TicTacToe', image: TicTac, key: 'TicTac', urlGit: 'https://github.com/Alexandru-Purcea/TicTac', urlDisplay: 'https://codepen.io/Alex1909/pen/gBbovO', description: 'Tic Tac Toe is a simple game written in React that provides you the option to go back to previous moves.' },
+            { name: 'Knolyx', image: Knolyx, key: 'Knolyx', urlDisplay: 'https://www.knolyx.com/', description: 'I collaborated at the development of Knolyx, one of the top 20 E-Learning Platforms in the world according to elearningindustry.com.' },
+            { name: 'EasyDo Events', image: EasyDo, key: 'EasyDo', urlDisplay: 'https://www.easydoevents.com/', description: 'I collaborated at the development of EasyDo Events, an event management platform that focuses on customizability.' }
         ]
-
         const ListItems = Items.map((item) => {
             return (
-                <div className='Project-Photo-Container' onClick={() => this.handleOpen(item)} key={item.key} >
-                    <img src={item.photo} className="Project-Photo" alt='project' />
-                </div>
+                <Project key={item.key} color={item.color} image={item.image} description={item.description} name={item.name} handleRedirectGit={() => this.handleRedirect(item.urlGit)} handleRedirectDisplay={() => this.handleRedirect(item.urlDisplay)} git={item.urlGit} />
             )
         })
         return (
             <div id={'Projects-container'}>
-                {state.modal === true && window.innerWidth > 900 && <Modal handleClose={this.handleClose} handleRedirectGit={() => this.handleRedirect(this.state.urlGit)}
-                    handleRedirectDisplay={() => this.handleRedirect(this.state.urlDisplay)} />}
                 <div id={'Projects-background'} />;
                 <div id={'Projects-overlay'}>
                     <div id={'Projects-title'}>Some of my projects</div>
