@@ -27,7 +27,7 @@ class AboutMe extends Component {
                     <div id={'AboutMe-textbox'}>
                         <p>{title}</p>
                         <p>{introduction} begun writing JavaScript at the age of 15 mentored by my brother which is currently the head of development at a major US healthcare application. Although I was the winner of multiple science contests I left one of the top High Schools and joined a private one for being able to work full time as a programmer.</p>
-                        <p>Today I work as a Front end Developer specialized in React and Redux.</p>
+                        <p>Nowadays I work as a Front end Developer specialized in React and Redux.</p>
                     </div>
                 </div>
             </div>
