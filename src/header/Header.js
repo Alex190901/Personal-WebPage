@@ -11,7 +11,7 @@ class Header extends Component {
     render() {
         return (
             <div id='header-container'>
-                <div id='header-background' />;
+                <div id='header-background' />
                 <div id='header-overlay'>
                     <div id={'navigation-bar'}>
                         <div id={'social-links'}>

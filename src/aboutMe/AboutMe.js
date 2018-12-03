@@ -7,17 +7,18 @@ class AboutMe extends Component {
         super(props);
         this.state = {
             title: 'My name is Purcea Alexandru and here is my story:',
-            introduction: 'I'
+            subtitle: 'My name is Purcea Alexandru and I\'m a Front End Developer',
+            mobile: false
         }
     }
     componentDidMount() {
         if (window.innerWidth < 751) {
-            this.setState({ title: 'Who is this guy?', introduction: 'My name is Purcea Alexandru and I' })
+            this.setState({ title: 'Who is this guy?', mobile: true })
         }
     }
     render() {
         let title = this.state.title;
-        let introduction = this.state.introduction;
+        let subtitle = this.state.subtitle;
         return (
             <div id={'AboutMe-container'}>
                 <div id={'AboutMe-photo'}>
@@ -26,8 +27,10 @@ class AboutMe extends Component {
                 <div id={'AboutMe-content'}>
                     <div id={'AboutMe-textbox'}>
                         <p>{title}</p>
-                        <p>{introduction} begun writing JavaScript at the age of 15 mentored by my brother which is currently the head of development at a major US healthcare application. Although I was the winner of multiple science contests I left one of the top High Schools and joined a private one for being able to work full time as a programmer.</p>
-                        <p>Nowadays I work as a Front end Developer specialized in React and Redux.</p>
+                        {this.state.mobile === true && <p>{subtitle}</p>}
+                        <p>When I was 15 I had a tough decision to make, follow the norm or be different. I eventually choose the latter one, that meant leaving one of the top High Schools in Bucharest and joining a private one, and like that, my journey as a programmer begun.</p>
+                        <p>Since that moment, mentored by my brother which is currently head of development at a major US healthcare application, I started learning JavaScript, HTML, CSS, React and the majority of technologies used in Front End Development, skills that I firstly implemented in personal projects, some of which can be seen below.</p>
+                        <p>Not too long afterwards I started developing EasyDo Events a professional enterprise application for managing events and Knolyx one of the top 20 E-Learning Platforms in the world according to elearningindustry.com. I have also implemented websites for various companies like 'IamRobbie' and 'BrainConcert'.</p>
                     </div>
                 </div>
             </div>

@@ -28,12 +28,10 @@ class App extends Component {
     } else {
       document.getElementById('navigation-bar').style.backgroundColor = 'transparent';
     }
-    if (window.innerWidth > 500 && scrollY > 1400 && document.getElementById('ScrollToTop').style.opacity < 0.6) {
+    if (window.innerWidth > 500 && scrollY > 1400) {
       document.getElementById('ScrollToTop').style.display = 'block';
-      document.getElementById('ScrollToTop').style.opacity = '0.6';
-    } else if (window.innerWidth > 500 && scrollY < 1000) {
-      document.getElementById('ScrollToTop').style.opacity = '0';
-      setTimeout(() => document.getElementById('ScrollToTop').style.display = 'none', 300);
+    } else if (window.innerWidth > 500 && scrollY < 1400) {
+      document.getElementById('ScrollToTop').style.display = 'none';
     }
   }
   componentDidMount() {
